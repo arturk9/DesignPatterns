@@ -1,8 +1,5 @@
 package ObserverPattern;
 
-/**
- * Created by artur on 01.11.16.
- */
 public class WeatherStation {
     public static void main(String[] args){
         WeatherData weatherData = new WeatherData();
