@@ -1,27 +1,21 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Main {
+import BuilderPattern.Car;
 
+public abstract class Main {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        int prisonersCount = 64404787;
-        int sweetsCount = 990499813;
-        int firstPrisonerId = 50168775;
-        int prisonerToWarn = 0;
+        Car car = new Car.Builder()
+                .color("red")
+                .age(12)
+                .build();
 
-        prisonerToWarn = firstPrisonerId + sweetsCount - 1;
-
-        if(prisonerToWarn > prisonersCount) {
-            prisonerToWarn = prisonerToWarn % prisonersCount;
-        }
-        System.out.println(prisonerToWarn);
+        System.out.println(car);
     }
 }
+
 
 
 
