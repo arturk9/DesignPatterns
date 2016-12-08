@@ -40,7 +40,10 @@ public class Construction {
         private int undergroundFloodCount;
         private int area;
 
-        public Builder(){};
+        public Builder(String name, String address){
+            this.name = name;
+            this.address = address;
+        }
 
         public Builder name(String name){
             this.name = name;
@@ -68,6 +71,7 @@ public class Construction {
         }
 
         public Construction build(){return new Construction(this);}
+    }
 
         @Override
         public String toString() {
@@ -79,6 +83,4 @@ public class Construction {
                     ", area=" + area +
                     '}';
         }
-
-    }
 }
